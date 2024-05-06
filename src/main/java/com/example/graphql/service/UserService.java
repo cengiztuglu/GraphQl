@@ -1,5 +1,6 @@
 package com.example.graphql.service;
 
+import com.example.graphql.exception.UserNotFoundException;
 import com.example.graphql.model.User;
 import com.example.graphql.model.UserRequest;
 import com.example.graphql.repo.UserRepository;
@@ -21,7 +22,7 @@ public class UserService {
     }
 
     public User getUserByID(Long id) {
-        return userRepository.findById(id).orElseThrow(() -> new RuntimeException("userNotFound"));
+        return userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("userNotFound"));
     }
 
     public User getUser(String userName) {
