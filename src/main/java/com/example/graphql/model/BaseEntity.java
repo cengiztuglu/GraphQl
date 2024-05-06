@@ -13,6 +13,9 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
+import java.time.OffsetTime;
+
 @Data
 @SuperBuilder
 @AllArgsConstructor
@@ -24,10 +27,9 @@ public abstract class BaseEntity {
     private Long id;
 
     @CreationTimestamp
-    private LocalDateTime createdTime;
+    private OffsetDateTime created;
 
     @UpdateTimestamp
-    private LocalDateTime localDateTime;
-
+    private OffsetDateTime updated;
 
 }

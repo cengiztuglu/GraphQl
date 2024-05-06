@@ -3,7 +3,8 @@ scalar DateTime
 
 type Query{
     getAllUsers:[User]
-    getUserByID(id:ID!): User
+    getUserById(id:ID!): User
+    getUserData(userName:String ):User
 }
 type Mutation{
     createUser(userRequest:UserRequest!):User

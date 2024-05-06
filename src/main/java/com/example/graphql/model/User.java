@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity(name = "`user`")
-public class User extends BaseEntity{
+public class User extends BaseEntity {
     private Long id;
     private String userName;
     private String mail;
